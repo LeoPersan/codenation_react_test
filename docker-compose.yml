@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  # PHP (with Nginx)
+  # you can change from nginx to apache, just change session 'image'
+  app:
+    image: lpcode/php:7.3
+    container_name: codenation-app
+    volumes:
+      - .:/var/www/app
+    ports:
+      - "80:8080"
